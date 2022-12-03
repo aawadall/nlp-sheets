@@ -16,7 +16,8 @@ def elmo_vectors(x):
     
     return embeddings
 
-text_input = tf.placeholder(dtype=tf.string, shape=[None, max_len])
+# define text tensor
+text_input = tf.Variable(["the cat is on the mat", "dogs are in the fog"], dtype=tf.string) 
 
 embed = elmo_vectors(text_input)
 
